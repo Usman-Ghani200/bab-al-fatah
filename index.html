@@ -138,54 +138,18 @@
     display: block;
   }
   
-  .mecca-scene {
-    position: absolute; right: 0; top: 0; bottom: 0;
-    width: 58%; z-index: 1; overflow: hidden;
-  }
-  .sky {
-    position: absolute; inset: 0;
-    background: linear-gradient(180deg,rgba(26,15,0,0.2) 0%,transparent 40%,transparent 60%,rgba(10,8,0,0.6) 100%);
-  }
-  .clock-tower {
-    position: absolute; bottom: 15%; left: 50%; transform: translateX(-50%);
-    width: 60px; height: 280px; background: linear-gradient(180deg,#2a1e05,#1a1200);
-  }
-  .clock-tower::before {
-    content: ''; position: absolute; top: -30px; left: 50%; transform: translateX(-50%);
-    width: 80px; height: 80px; background: radial-gradient(circle,#c4831a,#6b3d08); border-radius: 50%;
-  }
-  .clock-tower::after {
-    content: ''; position: absolute; top: -50px; left: 50%; transform: translateX(-50%);
-    width: 8px; height: 40px; background: var(--gold);
-  }
-  .kaaba-wrap { position: absolute; bottom: 18%; left: 35%; transform: translateX(-50%); }
-  .kaaba { width: 90px; height: 80px; background: #0a0a0a; position: relative; }
-  .kaaba::before {
-    content: ''; position: absolute; top: 15px; left: 0; right: 0; height: 12px;
-    background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-dark)); opacity: 0.9;
-  }
-  .kaaba::after {
-    content: ''; position: absolute; top: 28px; left: 50%; transform: translateX(-50%);
-    width: 18px; height: 22px; background: linear-gradient(180deg, var(--gold), var(--gold-dark));
-  }
-  .masjid-base {
-    position: absolute; bottom: 15%; left: 0; right: 0; height: 120px;
-    background: linear-gradient(180deg, rgba(60,40,5,0.6), rgba(20,14,0,0.9));
-  }
-  .dome1 { position: absolute; bottom: 100%; left: 20%; width: 50px; height: 35px; background: linear-gradient(180deg,#8b6a20,#5a4210); border-radius: 50% 50% 0 0; }
-  .dome2 { position: absolute; bottom: 100%; left: 35%; width: 70px; height: 45px; background: linear-gradient(180deg,#a07828,#6b4f15); border-radius: 50% 50% 0 0; }
-  .dome3 { position: absolute; bottom: 100%; right: 20%; width: 50px; height: 35px; background: linear-gradient(180deg,#8b6a20,#5a4210); border-radius: 50% 50% 0 0; }
-  .minaret1 { position: absolute; bottom: calc(15% + 60px); left: 10%; width: 14px; height: 120px; background: linear-gradient(180deg,#6b4f15,#3d2c05); }
-  .minaret1::before, .minaret2::before {
-    content: ''; position: absolute; top: -20px; left: 50%; transform: translateX(-50%);
-    width: 6px; height: 20px; background: var(--gold-dark);
-  }
-  .minaret2 { position: absolute; bottom: calc(15% + 60px); right: 10%; width: 14px; height: 120px; background: linear-gradient(180deg,#6b4f15,#3d2c05); }
-  .ground-glow { position: absolute; bottom: 0; left: 0; right: 0; height: 80px; background: radial-gradient(ellipse at center bottom, rgba(201,146,42,0.25), transparent); }
   .hero-overlay {
-    position: absolute; inset: 0; z-index: 2;
-    background: linear-gradient(to right, rgba(0,0,0,0.9) 35%, rgba(0,0,0,0.4) 65%, rgba(0,0,0,0.15) 100%);
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.88) 30%,
+      rgba(0, 0, 0, 0.55) 60%,
+      rgba(0, 0, 0, 0.25) 100%
+    );
   }
+  
   .hero-content {
     position: relative; z-index: 10;
     padding: 0 60px; max-width: 650px;
@@ -310,11 +274,7 @@
   .pkg-img-economy  { background: linear-gradient(180deg,#1a1200,#3d2c05,#6b4a0a,#2a1e00); }
   .pkg-img-deluxe   { background: linear-gradient(180deg,#0a0800,#2a1e05,#8b6214,#3d2c00); }
   .pkg-img-luxury   { background: linear-gradient(180deg,#1a0f00,#3d2505,#c4831a,#6b3d00); }
-  .pkg-img-scene { position: absolute; inset: 0; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 10px; z-index: 1; }
-  .pkg-scene-inner { display: flex; gap: 10px; align-items: flex-end; }
-  .pkg-dome { width: 60px; height: 40px; background: rgba(201,146,42,0.3); border-radius: 50% 50% 0 0; position: relative; }
-  .pkg-dome::before { content: ''; position: absolute; top: -8px; left: 50%; transform: translateX(-50%); width: 3px; height: 10px; background: var(--gold); opacity: 0.6; }
-  .pkg-minaret { width: 8px; height: 60px; background: rgba(201,146,42,0.2); }
+  .pkg-img-scene { position: relative; z-index: 1; }
   .pkg-glow { position: absolute; bottom: 0; left: 0; right: 0; height: 80px; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); z-index: 2; }
   .pkg-body { padding: 24px; }
   .pkg-name { font-family: 'Cinzel', serif; font-size: 0.85rem; letter-spacing: 0.15em; color: #fff; margin-bottom: 8px; }
@@ -335,9 +295,41 @@
   .pkg-btn:hover { background: var(--gold); color: var(--black); }
   .view-all-wrap { text-align: center; }
   
+  .pkg-bg-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    opacity: 0.55;
+    transition: opacity .4s, transform .4s;
+  }
+  
+  .pkg-card:hover .pkg-bg-img {
+    opacity: 1.0;
+    transform: scale(1.05);
+  }
+  
+  .pkg-bg-img1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    opacity: 0.55;
+    transition: opacity .4s, transform .4s;
+  }
+  
+  .pkg-card:hover .pkg-bg-img1 {
+    opacity: 1.0;
+    transform: scale(1.05);
+  }
+  
   /* ── CONTACT ── */
   .contact { background: var(--dark2); padding: 90px 60px; }
-  .contact-inner { display: grid; grid-template-columns: 1fr 1.6fr 0.9fr; gap: 60px; align-items: start; }
+  .contact-inner { display: grid; grid-template-columns: 1fr 1.6fr; gap: 60px; align-items: start; }
   .contact-left h2 { font-family: 'Cinzel', serif; font-size: clamp(1.6rem, 2.8vw, 2.4rem); font-weight: 700; line-height: 1.2; margin-bottom: 18px; }
   .contact-left h2 .white { color: #fff; }
   .contact-left h2 .gold { color: var(--gold); }
@@ -370,48 +362,13 @@
   .form-group input:focus,
   .form-group select:focus,
   .form-group textarea:focus { border-color: var(--gold); }
+  .form-group textarea { resize: vertical; min-height: 110px; }
   .form-status {
     font-size: 0.82rem; padding: 12px 16px;
     margin-bottom: 14px; display: none;
   }
   .form-status.success { display: block; background: rgba(201,146,42,0.1); border: 1px solid rgba(201,146,42,0.4); color: var(--gold); }
   .form-status.error   { display: block; background: rgba(220,38,38,0.1); border: 1px solid rgba(220,38,38,0.3); color: #f87171; }
-  
-  .contact-img-wrap { 
-    position: relative; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .contact-img {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    border: 1px solid rgba(201,146,42,0.2);
-    object-fit: cover;
-    object-position: center;
-    z-index: 0;
-    opacity: 1.0;
-    transition: opacity .4s, transform .4s ease;
-  }
-  .contact-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    transition: transform .4s ease;
-  }
-  .contact-img:hover img {
-    transform: scale(1.05);
-  }
-  .contact-mosque { text-align: center; }
-  .contact-dome-big { width: 80px; height: 55px; background: rgba(201,146,42,0.35); border-radius: 50% 50% 0 0; margin: 0 auto; }
-  .contact-dome-top { width: 6px; height: 20px; background: var(--gold); margin: 0 auto; }
-  .contact-dome-crescent { color: var(--gold); font-size: 1.2rem; margin-top: -4px; }
-  .contact-glow { position: absolute; bottom: 0; left: 0; right: 0; height: 100px; background: radial-gradient(ellipse at center bottom, rgba(201,146,42,0.2), transparent); }
-  .contact-arch { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 120px; height: 80px; border: 2px solid rgba(201,146,42,0.3); border-bottom: none; border-radius: 60px 60px 0 0; }
   
   /* ── FOOTER ── */
   footer { background: #000; border-top: 1px solid rgba(201,146,42,0.2); padding: 60px 60px 30px; }
@@ -499,8 +456,7 @@
     .about-inner { grid-template-columns: 1fr; }
     .about-right { grid-template-columns: repeat(3, 1fr); }
     .pkg-grid { grid-template-columns: 1fr 1fr; }
-    .contact-inner { grid-template-columns: 1fr 1fr; }
-    .contact-img-wrap { display: none; }
+    .contact-inner { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr 1fr; }
     .hero-content { padding: 0 30px; }
     .hero-services { display: none; }
@@ -520,41 +476,7 @@
     .about-right { grid-template-columns: 1fr; }
     .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
   }
-  
-  .pkg-bg-img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    z-index: 0;
-    opacity: 0.55;
-    transition: opacity .4s, transform .4s;
-  }
-  
-  .pkg-card:hover .pkg-bg-img {
-    opacity: 1.0;
-    transform: scale(1.05);
-  }
-  
-  .pkg-bg-img1 {
-    position: static;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    z-index: 0;
-    opacity: 0.55;
-    transition: opacity .4s, transform .4s;
-  }
-  
-  .pkg-card:hover .pkg-bg-img1 {
-    opacity: 1.0;
-    transform: scale(1.05);
-  }
-  </style>
+</style>
 </head>
 <body>
 
@@ -611,7 +533,7 @@
     <div class="hero-bg-img">
       <img src="WhatsApp Image 2026-05-16 at 5.30.34 PM.jpeg" alt="Mecca Background">
     </div>
-    </div>
+    <div class="hero-overlay"></div>
   </div>
   <div class="hero-content">
     <div class="hero-tag">
@@ -698,9 +620,7 @@
     <div class="pkg-card reveal delay-1" onclick="openPkgModal('economy')">
       <div class="pkg-img pkg-img-economy">
         <img src="madina(1).jpg" alt="Economy Package" class="pkg-bg-img1">
-        <div class="pkg-img-scene">
-          
-        </div>
+        <div class="pkg-img-scene"></div>
         <div class="pkg-glow"></div>
       </div>
       <div class="pkg-body">
@@ -723,9 +643,7 @@
       <div class="pkg-badge">MOST POPULAR</div>
       <div class="pkg-img pkg-img-deluxe">
         <img src="kaba.jpeg" alt="Deluxe Package" class="pkg-bg-img">
-        <div class="pkg-img-scene">
-          
-        </div>
+        <div class="pkg-img-scene"></div>
         <div class="pkg-glow"></div>
       </div>
       <div class="pkg-body">
@@ -808,11 +726,6 @@
       <button class="btn-gold" id="contactBtn" style="width:100%;justify-content:center;" onclick="submitContact()">
         SEND MESSAGE <i class="fas fa-paper-plane"></i>
       </button>
-    </div>
-    <div class="contact-img-wrap reveal-right">
-      <div class="contact-img">
-        <img src="Gemini_Generated_Image_k0fivwk0fivwk0fi.png" alt="Contact Image">
-      </div>
     </div>
   </div>
 </section>
