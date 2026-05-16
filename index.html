@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bab Al-Fatah Travel & Tours — Umrah With Comfort & Luxury</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  /* ── VARIABLES ── */
+  :root {
+    --gold: #C9922A;
+    --gold-light: #E8B84B;
+    --gold-dark: #8B6214;
+    --black: #0a0a0a;
+    --dark: #111;
+    --dark2: #1a1a1a;
+    --dark3: #222;
+    --white: #fff;
+    --gray: #888;
+  }
+  
+  /* ── RESET ── */
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Lato', sans-serif; background: var(--dark); color: var(--white); overflow-x: hidden; }
+  
+  /* ── TOPBAR ── */
+  .topbar {
+    background: #000;
+    padding: 7px 60px;
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 0.73rem; color: rgba(255,255,255,0.7);
+    border-bottom: 1px solid rgba(201,146,42,0.2);
+  }
+  .topbar-left { display: flex; align-items: center; gap: 7px; }
+  .topbar-left i { color: var(--gold); }
+  .topbar-right { display: flex; gap: 24px; }
+  .topbar-right a {
+    color: rgba(255,255,255,0.7); text-decoration: none;
+    display: flex; align-items: center; gap: 6px; transition: color .3s;
+  }
+  .topbar-right a:hover, .topbar-right a i { color: var(--gold); }
+  
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 1000;
+    background: rgba(10,10,10,0.97);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(201,146,42,0.25);
+    padding: 0 60px;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 74px;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 13px; text-decoration: none; }
+  .logo-icon {
+    width: 52px; height: 52px;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; flex-shrink: 0;
+  }
+  .logo-icon img {
+    width: 52px; height: 52px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 6px rgba(201,146,42,0.4));
+    transition: filter 0.3s, transform 0.3s;
+  }
+  .nav-logo:hover .logo-icon img {
+    filter: drop-shadow(0 0 12px rgba(201,146,42,0.7));
+    transform: scale(1.05);
+  }
+  .logo-text .brand {
+    font-family: 'Cinzel', serif; font-size: 0.95rem; font-weight: 700;
+    color: #fff; letter-spacing: 0.05em; display: block;
+  }
+  .logo-text .sub {
+    font-size: 0.52rem; letter-spacing: 0.3em;
+    color: var(--gold); text-transform: uppercase;
+  }
+  .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+  .nav-links a {
+    font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: rgba(255,255,255,0.8); text-decoration: none;
+    transition: color .3s; position: relative; padding-bottom: 3px;
+    background: none; border: none; cursor: pointer;
+  }
+  .nav-links a::after {
+    content: ''; position: absolute; bottom: 0; left: 0;
+    width: 0; height: 1px; background: var(--gold); transition: width .3s;
+  }
+  .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+  .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+  .nav-book {
+    background: var(--gold) !important; color: var(--black) !important;
+    padding: 10px 22px !important; font-weight: 700 !important;
+    letter-spacing: 0.1em !important;
+  }
+  .nav-book::after { display: none !important; }
+  .nav-book:hover { background: var(--gold-light) !important; }
+  
+  .hamburger {
+    display: none; flex-direction: column; gap: 5px;
+    cursor: pointer; padding: 8px; background: none; border: none;
+  }
+  .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--gold); transition: all .3s; }
+  .mobile-menu {
+    display: none; position: fixed; top: 74px; left: 0; right: 0;
+    background: #000; border-bottom: 1px solid rgba(201,146,42,0.3);
+    z-index: 999; padding: 20px 30px;
+    flex-direction: column; gap: 18px;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(255,255,255,0.8); text-decoration: none;
+    padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);
+    cursor: pointer;
+  }
+  .mobile-menu a:hover { color: var(--gold); }
+  
+  /* ── HERO ── */
+  .hero {
+    position: relative; height: 100vh; min-height: 600px;
+    display: flex; align-items: center; overflow: hidden;
+  }
+  .hero-bg { position: absolute; inset: 0; z-index: 0; }
+  
+  .hero-bg-img {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  
+  .hero-bg-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+  
+  .mecca-scene {
+    position: absolute; right: 0; top: 0; bottom: 0;
+    width: 58%; z-index: 1; overflow: hidden;
+  }
+  .sky {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg,rgba(26,15,0,0.2) 0%,transparent 40%,transparent 60%,rgba(10,8,0,0.6) 100%);
+  }
+  .clock-tower {
+    position: absolute; bottom: 15%; left: 50%; transform: translateX(-50%);
+    width: 60px; height: 280px; background: linear-gradient(180deg,#2a1e05,#1a1200);
+  }
+  .clock-tower::before {
+    content: ''; position: absolute; top: -30px; left: 50%; transform: translateX(-50%);
+    width: 80px; height: 80px; background: radial-gradient(circle,#c4831a,#6b3d08); border-radius: 50%;
+  }
+  .clock-tower::after {
+    content: ''; position: absolute; top: -50px; left: 50%; transform: translateX(-50%);
+    width: 8px; height: 40px; background: var(--gold);
+  }
+  .kaaba-wrap { position: absolute; bottom: 18%; left: 35%; transform: translateX(-50%); }
+  .kaaba { width: 90px; height: 80px; background: #0a0a0a; position: relative; }
+  .kaaba::before {
+    content: ''; position: absolute; top: 15px; left: 0; right: 0; height: 12px;
+    background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-dark)); opacity: 0.9;
+  }
+  .kaaba::after {
+    content: ''; position: absolute; top: 28px; left: 50%; transform: translateX(-50%);
+    width: 18px; height: 22px; background: linear-gradient(180deg, var(--gold), var(--gold-dark));
+  }
+  .masjid-base {
+    position: absolute; bottom: 15%; left: 0; right: 0; height: 120px;
+    background: linear-gradient(180deg, rgba(60,40,5,0.6), rgba(20,14,0,0.9));
+  }
+  .dome1 { position: absolute; bottom: 100%; left: 20%; width: 50px; height: 35px; background: linear-gradient(180deg,#8b6a20,#5a4210); border-radius: 50% 50% 0 0; }
+  .dome2 { position: absolute; bottom: 100%; left: 35%; width: 70px; height: 45px; background: linear-gradient(180deg,#a07828,#6b4f15); border-radius: 50% 50% 0 0; }
+  .dome3 { position: absolute; bottom: 100%; right: 20%; width: 50px; height: 35px; background: linear-gradient(180deg,#8b6a20,#5a4210); border-radius: 50% 50% 0 0; }
+  .minaret1 { position: absolute; bottom: calc(15% + 60px); left: 10%; width: 14px; height: 120px; background: linear-gradient(180deg,#6b4f15,#3d2c05); }
+  .minaret1::before, .minaret2::before {
+    content: ''; position: absolute; top: -20px; left: 50%; transform: translateX(-50%);
+    width: 6px; height: 20px; background: var(--gold-dark);
+  }
+  .minaret2 { position: absolute; bottom: calc(15% + 60px); right: 10%; width: 14px; height: 120px; background: linear-gradient(180deg,#6b4f15,#3d2c05); }
+  .ground-glow { position: absolute; bottom: 0; left: 0; right: 0; height: 80px; background: radial-gradient(ellipse at center bottom, rgba(201,146,42,0.25), transparent); }
+  .hero-overlay {
+    position: absolute; inset: 0; z-index: 2;
+    background: linear-gradient(to right, rgba(0,0,0,0.9) 35%, rgba(0,0,0,0.4) 65%, rgba(0,0,0,0.15) 100%);
+  }
+  .hero-content {
+    position: relative; z-index: 10;
+    padding: 0 60px; max-width: 650px;
+  }
+  .hero-tag { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+  .hero-tag span { font-weight: 300; font-size: 1.0rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); }
+  .hero-tag i { color: var(--gold); font-size: 0.rem; }
+  .hero-line { width: 40px; height: 1px; background: var(--gold); }
+  .hero-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2.8rem, 5.5vw, 5rem); font-weight: 700; line-height: 1.05; margin-bottom: 4px;
+  }
+  .hero-title .white { color: #fff; }
+  .hero-title .gold { color: var(--gold); }
+  .hero-sub-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.8rem, 3.5vw, 3rem); font-weight: 400; color: var(--gold); line-height: 1.1; margin-bottom: 22px;
+  }
+  .hero-desc { font-weight: 300; font-size: 1rem; color: rgba(255,255,255,0.7); line-height: 1.7; margin-bottom: 36px; max-width: 440px; }
+  .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+  
+  /* ── BUTTONS ── */
+  .btn-gold {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--gold); color: var(--black);
+    font-family: 'Lato', sans-serif; font-weight: 700;
+    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+    padding: 15px 32px; text-decoration: none; border: 2px solid var(--gold);
+    cursor: pointer; transition: all .3s;
+  }
+  .btn-gold:hover { background: var(--gold-light); border-color: var(--gold-light); }
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: transparent; color: #fff;
+    font-family: 'Lato', sans-serif; font-weight: 400;
+    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+    padding: 15px 32px; text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.4); cursor: pointer; transition: all .3s;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+  
+  /* ── HERO SERVICE BAR ── */
+  .hero-services {
+    position: absolute; bottom: 0; right: 0; z-index: 10;
+    background: rgba(0,0,0,0.9);
+    border-top: 1px solid rgba(201,146,42,0.3);
+    border-left: 1px solid rgba(201,146,42,0.3);
+    display: flex;
+  }
+  .hs-item {
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    padding: 22px 28px; border-right: 1px solid rgba(201,146,42,0.15);
+    cursor: pointer; transition: background 0ms;
+  }
+  .hs-item:hover { background: rgba(201,146,42,0.08); }
+  .hs-item i { color: var(--gold); font-size: 1.3rem; }
+  .hs-item span { font-weight: 300; font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.7); text-align: center; }
+  
+  /* ── FLOATING SIDE BUTTONS ── */
+  .side-btns { position: fixed; right: 0; top: 50%; transform: translateY(-50%); z-index: 999; display: flex; flex-direction: column; }
+  .side-btn {
+    width: 60px; height: 60px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+    cursor: pointer; transition: width .3s; text-decoration: none;
+  }
+  .side-btn.wa { background: #25D366; }
+  .side-btn.call { background: var(--gold); }
+  .side-btn:hover { width: 70px; }
+  .side-btn i { color: #fff; font-size: 1.1rem; }
+  .side-btn span { font-size: 0.45rem; color: #fff; letter-spacing: 0.1em; font-weight: 700; text-transform: uppercase; }
+  
+  /* ── SECTION COMMON ── */
+  .section-tag { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+  .section-tag span { font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); }
+  .section-tag::after { content: ''; flex: 1; max-width: 40px; height: 1px; background: var(--gold); }
+  .section-header { text-align: center; margin-bottom: 55px; }
+  .section-header .pre {
+    font-size: 0.72rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold);
+    display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 14px;
+  }
+  .section-header .pre::before, .section-header .pre::after { content: ''; width: 40px; height: 1px; background: var(--gold); }
+  .section-header h2 { font-family: 'Cinzel', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; }
+  .section-header h2 .white { color: #fff; }
+  .section-header h2 .gold { color: var(--gold); }
+  
+  /* ── ABOUT ── */
+  .about { background: var(--dark2); padding: 90px 60px; }
+  .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
+  .about-left h2 { font-family: 'Cinzel', serif; font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 700; line-height: 1.15; margin-bottom: 22px; }
+  .about-left h2 .white { color: #fff; }
+  .about-left h2 .gold { color: var(--gold); }
+  .about-left p { font-weight: 300; color: rgba(255,255,255,0.65); line-height: 1.8; font-size: 0.95rem; margin-bottom: 30px; }
+  .about-right { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+  .about-card {
+    background: var(--dark3); border: 1px solid rgba(201,146,42,0.2);
+    padding: 30px 20px; text-align: center; transition: all .3s; cursor: default;
+  }
+  .about-card:hover { border-color: var(--gold); transform: translateY(-4px); }
+  .about-card i { color: var(--gold); font-size: 1.8rem; margin-bottom: 14px; }
+  .about-card h4 { font-family: 'Cinzel', serif; font-size: 0.8rem; letter-spacing: 0.1em; color: #fff; margin-bottom: 10px; }
+  .about-card p { font-weight: 300; font-size: 0.8rem; color: rgba(255,255,255,0.55); line-height: 1.6; }
+  
+  /* ── PACKAGES ── */
+  .packages { background: var(--dark); padding: 90px 60px; }
+  .pkg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-bottom: 40px; }
+  .pkg-card {
+    background: var(--dark2); border: 1px solid rgba(201,146,42,0.2);
+    overflow: hidden; transition: all .4s; cursor: pointer; position: relative;
+  }
+  .pkg-card:hover { border-color: var(--gold); transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+  .pkg-badge {
+    position: absolute; top: 16px; left: -8px;
+    background: var(--gold); color: var(--black);
+    font-weight: 700; font-size: 0.6rem; letter-spacing: 0.15em;
+    padding: 5px 14px; text-transform: uppercase; z-index: 2;
+  }
+  .pkg-badge::after {
+    content: ''; position: absolute; bottom: -6px; left: 0;
+    border-left: 8px solid var(--gold-dark); border-bottom: 6px solid transparent;
+  }
+  .pkg-img { height: 200px; position: relative; overflow: hidden; }
+  .pkg-img-economy  { background: linear-gradient(180deg,#1a1200,#3d2c05,#6b4a0a,#2a1e00); }
+  .pkg-img-deluxe   { background: linear-gradient(180deg,#0a0800,#2a1e05,#8b6214,#3d2c00); }
+  .pkg-img-luxury   { background: linear-gradient(180deg,#1a0f00,#3d2505,#c4831a,#6b3d00); }
+  .pkg-img-scene { position: absolute; inset: 0; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 10px; z-index: 1; }
+  .pkg-scene-inner { display: flex; gap: 10px; align-items: flex-end; }
+  .pkg-dome { width: 60px; height: 40px; background: rgba(201,146,42,0.3); border-radius: 50% 50% 0 0; position: relative; }
+  .pkg-dome::before { content: ''; position: absolute; top: -8px; left: 50%; transform: translateX(-50%); width: 3px; height: 10px; background: var(--gold); opacity: 0.6; }
+  .pkg-minaret { width: 8px; height: 60px; background: rgba(201,146,42,0.2); }
+  .pkg-glow { position: absolute; bottom: 0; left: 0; right: 0; height: 80px; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); z-index: 2; }
+  .pkg-body { padding: 24px; }
+  .pkg-name { font-family: 'Cinzel', serif; font-size: 0.85rem; letter-spacing: 0.15em; color: #fff; margin-bottom: 8px; }
+  .pkg-from { font-size: 0.65rem; letter-spacing: 0.2em; color: rgba(255,255,255,0.45); text-transform: uppercase; margin-bottom: 4px; }
+  .pkg-price { font-family: 'Cinzel', serif; font-size: 1.6rem; color: var(--gold); margin-bottom: 4px; }
+  .pkg-price span { font-size: 0.65rem; color: rgba(255,255,255,0.45); font-family: 'Lato', sans-serif; letter-spacing: 0.1em; }
+  .pkg-divider { height: 1px; background: rgba(201,146,42,0.15); margin: 16px 0; }
+  .pkg-features { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 18px; }
+  .pkg-feat { display: flex; align-items: center; gap: 6px; font-size: 0.65rem; color: rgba(255,255,255,0.55); letter-spacing: 0.05em; }
+  .pkg-feat i { color: var(--gold); font-size: 0.65rem; }
+  .pkg-btn {
+    display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%;
+    background: transparent; border: 1px solid var(--gold); color: var(--gold);
+    font-family: 'Lato', sans-serif; font-weight: 700; font-size: 0.68rem;
+    letter-spacing: 0.2em; text-transform: uppercase; padding: 13px;
+    cursor: pointer; transition: all .3s;
+  }
+  .pkg-btn:hover { background: var(--gold); color: var(--black); }
+  .view-all-wrap { text-align: center; }
+  
+  /* ── CONTACT ── */
+  .contact { background: var(--dark2); padding: 90px 60px; }
+  .contact-inner { display: grid; grid-template-columns: 1fr 1.6fr 0.9fr; gap: 60px; align-items: start; }
+  .contact-left h2 { font-family: 'Cinzel', serif; font-size: clamp(1.6rem, 2.8vw, 2.4rem); font-weight: 700; line-height: 1.2; margin-bottom: 18px; }
+  .contact-left h2 .white { color: #fff; }
+  .contact-left h2 .gold { color: var(--gold); }
+  .contact-left p { font-weight: 300; color: rgba(255,255,255,0.55); line-height: 1.7; font-size: 0.9rem; margin-bottom: 30px; }
+  .contact-detail { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .contact-detail i { color: var(--gold); font-size: 1rem; width: 20px; }
+  .contact-detail span { font-size: 0.88rem; color: rgba(255,255,255,0.7); }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+  .form-group { margin-bottom: 14px; }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(201,146,42,0.25);
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 0.88rem;
+    padding: 14px 16px;
+    outline: none;
+    transition: border-color .3s;
+    resize: vertical;
+    min-height: 110px;
+  }
+  .form-group input::placeholder,
+  .form-group textarea::placeholder { color: rgba(255,255,255,0.3); }
+  .form-group select { color: rgba(255,255,255,0.5); }
+  .form-group select option { background: #1a1a1a; color: #fff; }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--gold); }
+  .form-status {
+    font-size: 0.82rem; padding: 12px 16px;
+    margin-bottom: 14px; display: none;
+  }
+  .form-status.success { display: block; background: rgba(201,146,42,0.1); border: 1px solid rgba(201,146,42,0.4); color: var(--gold); }
+  .form-status.error   { display: block; background: rgba(220,38,38,0.1); border: 1px solid rgba(220,38,38,0.3); color: #f87171; }
+  
+  .contact-img-wrap { 
+    position: relative; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(201,146,42,0.2);
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    opacity: 1.0;
+    transition: opacity .4s, transform .4s ease;
+  }
+  .contact-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform .4s ease;
+  }
+  .contact-img:hover img {
+    transform: scale(1.05);
+  }
+  .contact-mosque { text-align: center; }
+  .contact-dome-big { width: 80px; height: 55px; background: rgba(201,146,42,0.35); border-radius: 50% 50% 0 0; margin: 0 auto; }
+  .contact-dome-top { width: 6px; height: 20px; background: var(--gold); margin: 0 auto; }
+  .contact-dome-crescent { color: var(--gold); font-size: 1.2rem; margin-top: -4px; }
+  .contact-glow { position: absolute; bottom: 0; left: 0; right: 0; height: 100px; background: radial-gradient(ellipse at center bottom, rgba(201,146,42,0.2), transparent); }
+  .contact-arch { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 120px; height: 80px; border: 2px solid rgba(201,146,42,0.3); border-bottom: none; border-radius: 60px 60px 0 0; }
+  
+  /* ── FOOTER ── */
+  footer { background: #000; border-top: 1px solid rgba(201,146,42,0.2); padding: 60px 60px 30px; }
+  .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 50px; margin-bottom: 50px; }
+  .footer-brand .brand-name { font-family: 'Cinzel', serif; font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 6px; }
+  .footer-brand .brand-tag { font-size: 0.6rem; letter-spacing: 0.3em; color: var(--gold); text-transform: uppercase; margin-bottom: 16px; }
+  .footer-brand p { font-weight: 300; font-size: 0.82rem; color: rgba(255,255,255,0.45); line-height: 1.7; margin-bottom: 20px; }
+  .footer-socials { display: flex; gap: 10px; }
+  .footer-social {
+    width: 34px; height: 34px; border: 1px solid rgba(201,146,42,0.3);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold); font-size: 0.8rem; text-decoration: none; transition: all .3s;
+  }
+  .footer-social:hover { background: var(--gold); color: var(--black); }
+  .footer-col h4 {
+    font-family: 'Cinzel', serif; font-size: 0.8rem; letter-spacing: 0.1em; color: #fff;
+    margin-bottom: 20px; position: relative; padding-bottom: 12px;
+  }
+  .footer-col h4::after { content: ''; position: absolute; bottom: 0; left: 0; width: 30px; height: 1px; background: var(--gold); }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 10px; }
+  .footer-col ul li a {
+    font-weight: 300; font-size: 0.82rem; color: rgba(255,255,255,0.45);
+    text-decoration: none; transition: color .3s;
+    display: flex; align-items: center; gap: 8px; cursor: pointer;
+  }
+  .footer-col ul li a::before { content: '›'; color: var(--gold); }
+  .footer-col ul li a:hover { color: var(--gold); }
+  .footer-contact-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; }
+  .footer-contact-item i { color: var(--gold); font-size: 0.8rem; margin-top: 3px; flex-shrink: 0; }
+  .footer-contact-item span { font-weight: 300; font-size: 0.82rem; color: rgba(255,255,255,0.45); line-height: 1.5; }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 24px; display: flex; align-items: center; justify-content: space-between; }
+  .footer-bottom p { font-weight: 300; font-size: 0.75rem; color: rgba(255,255,255,0.3); }
+  .footer-bottom span { color: var(--gold); }
+  
+  /* ── MODAL ── */
+  .modal-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.85);
+    z-index: 9999; display: none; align-items: center; justify-content: center;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    background: var(--dark2); border: 1px solid rgba(201,146,42,0.3);
+    max-width: 560px; width: 100%; max-height: 90vh; overflow-y: auto; padding: 40px;
+  }
+  .modal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; }
+  .modal-title { font-family: 'Cinzel', serif; font-size: 1.1rem; color: #fff; }
+  .modal-close { background: none; border: none; color: rgba(255,255,255,0.5); font-size: 1.3rem; cursor: pointer; transition: color .3s; padding: 4px; }
+  .modal-close:hover { color: var(--gold); }
+  .modal-pkg-name { font-family: 'Cinzel', serif; color: var(--gold); font-size: 0.85rem; letter-spacing: 0.1em; margin-bottom: 6px; }
+  .modal-price { font-family: 'Cinzel', serif; font-size: 2rem; color: var(--gold); margin-bottom: 20px; }
+  .modal-price small { font-size: 0.7rem; color: rgba(255,255,255,0.4); font-family: 'Lato', sans-serif; }
+  .modal-features { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 24px; }
+  .modal-feat { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: rgba(255,255,255,0.65); }
+  .modal-feat i { color: var(--gold); }
+  .modal-desc { font-weight: 300; font-size: 0.88rem; color: rgba(255,255,255,0.55); line-height: 1.7; margin-bottom: 24px; }
+  .modal-divider { height: 1px; background: rgba(201,146,42,0.15); margin: 20px 0; }
+  .modal-status { font-size: 0.82rem; padding: 12px 16px; margin-bottom: 14px; display: none; }
+  .modal-status.success { display: block; background: rgba(201,146,42,0.1); border: 1px solid rgba(201,146,42,0.4); color: var(--gold); }
+  .modal-status.error   { display: block; background: rgba(220,38,38,0.1); border: 1px solid rgba(220,38,38,0.3); color: #f87171; }
+  
+  /* ── TOAST ── */
+  .toast {
+    position: fixed; bottom: 30px; left: 50%;
+    transform: translateX(-50%) translateY(80px);
+    background: var(--dark3); border: 1px solid var(--gold);
+    color: #fff; font-size: 0.85rem; padding: 14px 28px;
+    z-index: 99999; transition: transform .4s; white-space: nowrap;
+  }
+  .toast.show { transform: translateX(-50%) translateY(0); }
+  .toast i { color: var(--gold); margin-right: 8px; }
+  
+  /* ── ANIMATIONS ── */
+  .reveal       { opacity: 0; transform: translateY(30px);  transition: opacity .8s, transform .8s cubic-bezier(.25,.46,.45,.94); }
+  .reveal-left  { opacity: 0; transform: translateX(-30px); transition: opacity .8s, transform .8s cubic-bezier(.25,.46,.45,.94); }
+  .reveal-right { opacity: 0; transform: translateX(30px);  transition: opacity .8s, transform .8s cubic-bezier(.25,.46,.45,.94); }
+  .reveal.visible, .reveal-left.visible, .reveal-right.visible { opacity: 1; transform: none; }
+  .delay-1 { transition-delay: .1s; }
+  .delay-2 { transition-delay: .2s; }
+  .delay-3 { transition-delay: .3s; }
+  
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) {
+    .topbar, nav, .about, .packages, .contact, footer { padding-left: 30px; padding-right: 30px; }
+    .about-inner { grid-template-columns: 1fr; }
+    .about-right { grid-template-columns: repeat(3, 1fr); }
+    .pkg-grid { grid-template-columns: 1fr 1fr; }
+    .contact-inner { grid-template-columns: 1fr 1fr; }
+    .contact-img-wrap { display: none; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .hero-content { padding: 0 30px; }
+    .hero-services { display: none; }
+  }
+  @media (max-width: 768px) {
+    .topbar { display: none; }
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .hero-content { padding: 0 20px; }
+    .hero-title { font-size: 2.4rem; }
+    .pkg-grid { grid-template-columns: 1fr; }
+    .contact-inner { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .about, .packages, .contact, footer { padding: 60px 20px; }
+    .about-right { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+  }
+  
+  .pkg-bg-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    opacity: 0.55;
+    transition: opacity .4s, transform .4s;
+  }
+  
+  .pkg-card:hover .pkg-bg-img {
+    opacity: 1.0;
+    transform: scale(1.05);
+  }
+  
+  .pkg-bg-img1 {
+    position: static;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    opacity: 0.55;
+    transition: opacity .4s, transform .4s;
+  }
+  
+  .pkg-card:hover .pkg-bg-img1 {
+    opacity: 1.0;
+    transform: scale(1.05);
+  }
+  </style>
+</head>
+<body>
+
+<!-- ── TOP BAR ── -->
+<div class="topbar">
+  <div class="topbar-left">
+    <i class="fas fa-plane"></i>
+    <span>Your Journey. Our Responsibility. Allah's Pleasure.</span>
+  </div>
+  <div class="topbar-right">
+    <a href="mailto:info@babalfatahtravels.com"><i class="fas fa-envelope"></i> info@babalfatahtravels.com</a>
+    <a href="tel:+923203550436"><i class="fas fa-phone"></i> +92 320 3550436 | +92 309 2969481</a>
+  </div>
+</div>
+
+<!-- ── NAV ── -->
+<nav id="mainNav">
+  <a href="#" class="nav-logo">
+    <div class="logo-icon"><img src="621c8834-bd5e-47aa-89b7-ec5c1468afd9_removalai_preview.png" alt=""></div>
+    <div class="logo-text">
+      <span class="brand">Bab Al-Fatah</span>
+      <span class="sub">Travel &amp; Tours</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a class="active" onclick="smoothTo('hero')">Home</a></li>
+    <li><a onclick="smoothTo('about')">About Us</a></li>
+    <li><a onclick="smoothTo('packages')">Umrah Packages</a></li>
+    <li><a onclick="showToast('Hotels section coming soon!')">Hotels</a></li>
+    <li><a onclick="showToast('Services section coming soon!')">Services</a></li>
+    <li><a onclick="showToast('Gallery coming soon!')">Gallery</a></li>
+    <li><a onclick="smoothTo('contact')">Contact Us</a></li>
+    <li><a class="nav-book" onclick="openBookingModal()">Book Now</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a onclick="smoothTo('hero');closeMenu()">Home</a>
+  <a onclick="smoothTo('about');closeMenu()">About Us</a>
+  <a onclick="smoothTo('packages');closeMenu()">Umrah Packages</a>
+  <a onclick="showToast('Hotels section coming soon!');closeMenu()">Hotels</a>
+  <a onclick="showToast('Services section coming soon!');closeMenu()">Services</a>
+  <a onclick="smoothTo('contact');closeMenu()">Contact Us</a>
+  <a onclick="openBookingModal();closeMenu()">Book Now</a>
+</div>
+
+<!-- ── HERO ── -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <div class="hero-bg-img">
+      <img src="WhatsApp Image 2026-05-16 at 5.30.34 PM.jpeg" alt="Mecca Background">
+    </div>
+    </div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-tag">
+      <div class="hero-line"></div>
+      <i class="fas fa-star-and-crescent"></i>
+      <span>A Journey of Faith</span>
+    </div>
+    <h1 class="hero-title">
+      <span class="white">UMRAH</span><br>
+      <span class="gold">WITH COMFORT</span><br>
+      <span class="gold">&amp; LUXURY</span>
+    </h1>
+    <p class="hero-desc">Experience the spiritual journey of a lifetime with premium services and world-class hospitality.</p>
+    <div class="hero-btns">
+      <a class="btn-gold" onclick="smoothTo('packages')">EXPLORE PACKAGES <i class="fas fa-arrow-right"></i></a>
+      <a class="btn-outline" onclick="smoothTo('contact')"><i class="fas fa-phone"></i> CONTACT US</a>
+    </div>
+  </div>
+  <div class="hero-services">
+    <div class="hs-item" onclick="showToast('Visa Processing — We handle all your visa requirements!')">
+      <i class="fas fa-id-card"></i><span>VISA<br>PROCESSING</span>
+    </div>
+    <div class="hs-item" onclick="showToast('Flight Booking — Best deals on flights to Jeddah &amp; Madinah!')">
+      <i class="fas fa-plane"></i><span>FLIGHT<br>BOOKING</span>
+    </div>
+    <div class="hs-item" onclick="showToast('Luxury Hotels — 3 to 5 star hotels near Haram!')">
+      <i class="fas fa-hotel"></i><span>LUXURY<br>HOTELS</span>
+    </div>
+    <div class="hs-item" onclick="showToast('Transport Services — AC coaches &amp; private transfers!')">
+      <i class="fas fa-bus"></i><span>TRANSPORT<br>SERVICES</span>
+    </div>
+    <div class="hs-item" onclick="smoothTo('contact')">
+      <i class="fas fa-headset"></i><span>24/7<br>SUPPORT</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── FLOATING SIDE BUTTONS ── -->
+<div class="side-btns">
+  <a href="https://wa.me/923203550436" target="_blank" class="side-btn wa">
+    <i class="fab fa-whatsapp"></i><span>WhatsApp</span>
+  </a>
+  <a href="tel:+923203550436" class="side-btn call">
+    <i class="fas fa-phone"></i><span>Call Now</span>
+  </a>
+</div>
+
+<!-- ── ABOUT ── -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-left reveal-left">
+      <div class="section-tag"><span>About Us</span></div>
+      <h2><span class="white">TRUSTED UMRAH</span><br><span class="gold">TRAVEL PARTNER</span></h2>
+      <p>Bab Al-Fatah Travel &amp; Tours is a trusted name in Umrah services. We are committed to providing a blessed, comfortable and hassle-free journey for our valuable clients with premium facilities and heartfelt care. With years of experience serving thousands of satisfied pilgrims from across Pakistan, we bring you the most reliable Umrah packages at the best prices.</p>
+      <a class="btn-gold" onclick="smoothTo('packages')">VIEW PACKAGES <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="about-right reveal-right">
+      <div class="about-card delay-1">
+        <i class="fas fa-users"></i>
+        <h4>EXPERIENCED</h4>
+        <p>Years of experience in Umrah services with thousands of satisfied pilgrims.</p>
+      </div>
+      <div class="about-card delay-2">
+        <i class="fas fa-tag"></i>
+        <h4>BEST PRICE</h4>
+        <p>Competitive prices with premium services and no hidden costs.</p>
+      </div>
+      <div class="about-card delay-3">
+        <i class="fas fa-headset"></i>
+        <h4>24/7 SUPPORT</h4>
+        <p>We are available 24/7 to assist you during your entire journey.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PACKAGES ── -->
+<section class="packages" id="packages">
+  <div class="section-header reveal">
+    <div class="pre">OUR PREMIUM</div>
+    <h2><span class="white">UMRAH </span><span class="gold">PACKAGES</span></h2>
+  </div>
+  <div class="pkg-grid">
+    <div class="pkg-card reveal delay-1" onclick="openPkgModal('economy')">
+      <div class="pkg-img pkg-img-economy">
+        <img src="madina(1).jpg" alt="Economy Package" class="pkg-bg-img1">
+        <div class="pkg-img-scene">
+          
+        </div>
+        <div class="pkg-glow"></div>
+      </div>
+      <div class="pkg-body">
+        <div class="pkg-name">ECONOMY PACKAGE</div>
+        <div class="pkg-from">STARTING FROM</div>
+        <div class="pkg-price">PKR 165,000 <span>PER PERSON</span></div>
+        <div class="pkg-divider"></div>
+        <div class="pkg-features">
+          <div class="pkg-feat"><i class="fas fa-clock"></i> 14 DAYS</div>
+          <div class="pkg-feat"><i class="fas fa-id-card"></i> VISA</div>
+          <div class="pkg-feat"><i class="fas fa-plane"></i> FLIGHT</div>
+          <div class="pkg-feat"><i class="fas fa-hotel"></i> 3 STAR</div>
+          <div class="pkg-feat"><i class="fas fa-bus"></i> TRANSPORT</div>
+          <div class="pkg-feat"><i class="fas fa-kaaba"></i> ZIYARAT</div>
+        </div>
+        <button class="pkg-btn">VIEW DETAILS <i class="fas fa-arrow-right"></i></button>
+      </div>
+    </div>
+    <div class="pkg-card reveal delay-2" onclick="openPkgModal('deluxe')">
+      <div class="pkg-badge">MOST POPULAR</div>
+      <div class="pkg-img pkg-img-deluxe">
+        <img src="kaba.jpeg" alt="Deluxe Package" class="pkg-bg-img">
+        <div class="pkg-img-scene">
+          
+        </div>
+        <div class="pkg-glow"></div>
+      </div>
+      <div class="pkg-body">
+        <div class="pkg-name">DELUXE PACKAGE</div>
+        <div class="pkg-from">STARTING FROM</div>
+        <div class="pkg-price">PKR 195,000 <span>PER PERSON</span></div>
+        <div class="pkg-divider"></div>
+        <div class="pkg-features">
+          <div class="pkg-feat"><i class="fas fa-clock"></i> 14 DAYS</div>
+          <div class="pkg-feat"><i class="fas fa-id-card"></i> VISA</div>
+          <div class="pkg-feat"><i class="fas fa-plane"></i> FLIGHT</div>
+          <div class="pkg-feat"><i class="fas fa-hotel"></i> 4 STAR</div>
+          <div class="pkg-feat"><i class="fas fa-bus"></i> TRANSPORT</div>
+          <div class="pkg-feat"><i class="fas fa-kaaba"></i> ZIYARAT</div>
+        </div>
+        <button class="pkg-btn">VIEW DETAILS <i class="fas fa-arrow-right"></i></button>
+      </div>
+    </div>
+    <div class="pkg-card reveal delay-3" onclick="openPkgModal('luxury')">
+      <div class="pkg-img pkg-img-luxury">
+        <img src="WhatsApp Image 2026-05-16 at 5.52.07 PM.jpeg" alt="Luxury Package" class="pkg-bg-img">
+        <div class="pkg-img-scene">
+          <div class="pkg-scene-inner"></div>
+        </div>
+        <div class="pkg-glow"></div>
+      </div>
+      <div class="pkg-body">
+        <div class="pkg-name">LUXURY PACKAGE</div>
+        <div class="pkg-from">STARTING FROM</div>
+        <div class="pkg-price">PKR 245,000 <span>PER PERSON</span></div>
+        <div class="pkg-divider"></div>
+        <div class="pkg-features">
+          <div class="pkg-feat"><i class="fas fa-clock"></i> 14 DAYS</div>
+          <div class="pkg-feat"><i class="fas fa-id-card"></i> VISA</div>
+          <div class="pkg-feat"><i class="fas fa-plane"></i> FLIGHT</div>
+          <div class="pkg-feat"><i class="fas fa-hotel"></i> 5 STAR</div>
+          <div class="pkg-feat"><i class="fas fa-bus"></i> TRANSPORT</div>
+          <div class="pkg-feat"><i class="fas fa-kaaba"></i> ZIYARAT</div>
+        </div>
+        <button class="pkg-btn">VIEW DETAILS <i class="fas fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+  <div class="view-all-wrap reveal">
+    <button class="btn-outline" onclick="showToast('More packages coming soon! Contact us for custom packages.')">VIEW ALL PACKAGES</button>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-left reveal-left">
+      <div class="section-tag"><span>Get In Touch</span></div>
+      <h2><span class="white">WE ARE HERE<br>TO HELP YOU</span></h2>
+      <p>Have questions or need assistance with your Umrah journey? Our team is ready to help you.</p>
+      <div class="contact-detail"><i class="fas fa-phone"></i><span>+92 320 3550436</span></div>
+      <div class="contact-detail"><i class="fab fa-whatsapp"></i><span>+92 309 2969481</span></div>
+      <div class="contact-detail"><i class="fas fa-envelope"></i><span>info@babalfatahtravels.com</span></div>
+      <div class="contact-detail"><i class="fas fa-map-marker-alt"></i><span>Office 12, Al-Fatah Plaza, Main Boulevard, Lahore, Pakistan</span></div>
+    </div>
+    <div class="reveal">
+      <div id="contactStatus" class="form-status"></div>
+      <div class="form-row">
+        <div class="form-group"><input type="text" id="cName" placeholder="Your Name"></div>
+        <div class="form-group"><input type="email" id="cEmail" placeholder="Your Email"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><input type="tel" id="cPhone" placeholder="Your Phone"></div>
+        <div class="form-group">
+          <select id="cPackage">
+            <option value="" disabled selected>Select Package</option>
+            <option>Economy Package — PKR 165,000</option>
+            <option>Deluxe Package — PKR 195,000</option>
+            <option>Luxury Package — PKR 245,000</option>
+            <option>Custom Package</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group"><textarea id="cMsg" placeholder="Your Message"></textarea></div>
+      <button class="btn-gold" id="contactBtn" style="width:100%;justify-content:center;" onclick="submitContact()">
+        SEND MESSAGE <i class="fas fa-paper-plane"></i>
+      </button>
+    </div>
+    <div class="contact-img-wrap reveal-right">
+      <div class="contact-img">
+        <img src="Gemini_Generated_Image_k0fivwk0fivwk0fi.png" alt="Contact Image">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="brand-name">Bab Al-Fatah Travel &amp; Tours</div>
+      <div class="brand-tag">Your Journey. Our Responsibility.</div>
+      <p>Pakistan's trusted Umrah travel partner. We are committed to providing a blessed, comfortable and memorable journey for every pilgrim.</p>
+      <div class="footer-socials">
+        <a href="#" class="footer-social" onclick="showToast('Facebook page coming soon!')"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="footer-social" onclick="showToast('Instagram coming soon!')"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/923203550436" target="_blank" class="footer-social"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="footer-social" onclick="showToast('YouTube coming soon!')"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a onclick="smoothTo('hero')">Home</a></li>
+        <li><a onclick="smoothTo('about')">About Us</a></li>
+        <li><a onclick="smoothTo('packages')">Umrah Packages</a></li>
+        <li><a onclick="showToast('Hotels page coming soon!')">Hotels</a></li>
+        <li><a onclick="showToast('Services page coming soon!')">Services</a></li>
+        <li><a onclick="smoothTo('contact')">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a onclick="showToast('Visa processing info coming soon!')">Visa Processing</a></li>
+        <li><a onclick="showToast('Flight booking coming soon!')">Flight Booking</a></li>
+        <li><a onclick="showToast('Hotel booking coming soon!')">Luxury Hotels</a></li>
+        <li><a onclick="showToast('Transport info coming soon!')">Transport Services</a></li>
+        <li><a onclick="showToast('Ziyarat info coming soon!')">Ziyarat Tours</a></li>
+        <li><a onclick="smoothTo('contact')">24/7 Support</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>Office 12, Al-Fatah Plaza, Main Boulevard, Lahore, Pakistan</span></div>
+      <div class="footer-contact-item"><i class="fas fa-phone"></i><span>+92 320 3550436</span></div>
+      <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><span>+92 309 2969481</span></div>
+      <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>info@babalfatahtravels.com</span></div>
+      <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Mon–Sat: 9:00 AM – 8:00 PM</span></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 <span>Bab Al-Fatah Travel &amp; Tours</span>. All Rights Reserved.</p>
+    <p>Designed with <span>♥</span> for the Pilgrims of Allah</p>
+  </div>
+</footer>
+
+<!-- ── PACKAGE MODAL ── -->
+<div class="modal-overlay" id="pkgModal" onclick="if(event.target===this)closePkgModal()">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title">Package Details</div>
+      <button class="modal-close" onclick="closePkgModal()"><i class="fas fa-times"></i></button>
+    </div>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<!-- ── BOOKING MODAL ── -->
+<div class="modal-overlay" id="bookingModal" onclick="if(event.target===this)closeBookingModal()">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title">Book Your Umrah Journey</div>
+      <button class="modal-close" onclick="closeBookingModal()"><i class="fas fa-times"></i></button>
+    </div>
+    <div id="bookingStatus" class="modal-status"></div>
+    <div class="form-row">
+      <div class="form-group"><input type="text" id="bName" placeholder="Full Name"></div>
+      <div class="form-group"><input type="tel" id="bPhone" placeholder="Phone Number"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><input type="email" id="bEmail" placeholder="Email Address"></div>
+      <div class="form-group"><input type="number" id="bPilgrims" placeholder="No. of Pilgrims" min="1"></div>
+    </div>
+    <div class="form-group">
+      <select id="bPackage">
+        <option value="" disabled selected>Select Package</option>
+        <option>Economy Package — PKR 165,000</option>
+        <option>Deluxe Package — PKR 195,000</option>
+        <option>Luxury Package — PKR 245,000</option>
+        <option>Custom Package</option>
+      </select>
+    </div>
+    <div class="form-group"><input type="date" id="bDate"></div>
+    <div class="form-group"><textarea id="bNotes" placeholder="Special Requirements (optional)" style="min-height:80px;"></textarea></div>
+    <button class="btn-gold" id="bookingBtn" style="width:100%;justify-content:center;" onclick="submitBooking()">
+      CONFIRM BOOKING <i class="fas fa-check"></i>
+    </button>
+  </div>
+</div>
+
+<!-- ── TOAST ── -->
+<div class="toast" id="toast"></div>
+
+<script>
+const W3F_KEY = 'YOUR_ACCESS_KEY_HERE';
+
+const pkgs = {
+  economy: {
+    name: 'ECONOMY PACKAGE', price: 'PKR 165,000', per: 'PER PERSON',
+    desc: 'Our Economy Package is perfect for pilgrims seeking a blessed and comfortable Umrah journey without breaking the bank. Includes all essential services with 3-star accommodation near Haram.',
+    features: [
+      {icon:'fas fa-clock',text:'14 Days'},{icon:'fas fa-id-card',text:'Visa Included'},
+      {icon:'fas fa-plane',text:'Return Flights'},{icon:'fas fa-hotel',text:'3 Star Hotel'},
+      {icon:'fas fa-bus',text:'Transport'},{icon:'fas fa-kaaba',text:'Ziyarat Tour'},
+      {icon:'fas fa-utensils',text:'Breakfast'},{icon:'fas fa-headset',text:'24/7 Support'},
+    ]
+  },
+  deluxe: {
+    name: 'DELUXE PACKAGE', price: 'PKR 195,000', per: 'PER PERSON',
+    desc: 'Our most popular Deluxe Package offers premium 4-star accommodation with enhanced comfort and added services. Ideal for families seeking a truly memorable Umrah experience.',
+    features: [
+      {icon:'fas fa-clock',text:'14 Days'},{icon:'fas fa-id-card',text:'Visa Included'},
+      {icon:'fas fa-plane',text:'Return Flights'},{icon:'fas fa-hotel',text:'4 Star Hotel'},
+      {icon:'fas fa-bus',text:'Private Transport'},{icon:'fas fa-kaaba',text:'Ziyarat Tour'},
+      {icon:'fas fa-utensils',text:'Half Board'},{icon:'fas fa-headset',text:'24/7 Support'},
+    ]
+  },
+  luxury: {
+    name: 'LUXURY PACKAGE', price: 'PKR 245,000', per: 'PER PERSON',
+    desc: 'The ultimate Umrah experience. 5-star accommodation steps from Haram, private transfers, dedicated guide, and full-board meals. For those who seek the very finest in spiritual travel.',
+    features: [
+      {icon:'fas fa-clock',text:'14 Days'},{icon:'fas fa-id-card',text:'Visa Included'},
+      {icon:'fas fa-plane',text:'Business Class'},{icon:'fas fa-hotel',text:'5 Star Hotel'},
+      {icon:'fas fa-car',text:'Private Car'},{icon:'fas fa-kaaba',text:'VIP Ziyarat'},
+      {icon:'fas fa-utensils',text:'Full Board'},{icon:'fas fa-user-tie',text:'Personal Guide'},
+    ]
+  }
+};
+
+function smoothTo(id) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth' });
+}
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.innerHTML = '<i class="fas fa-info-circle"></i>' + msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3000);
+}
+function setStatus(id, msg, type) {
+  const el = document.getElementById(id);
+  el.textContent = msg;
+  el.className = 'form-status ' + type;
+}
+function setModalStatus(id, msg, type) {
+  const el = document.getElementById(id);
+  el.textContent = msg;
+  el.className = 'modal-status ' + type;
+}
+function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+function closeMenu()  { document.getElementById('mobileMenu').classList.remove('open'); }
+
+function openPkgModal(key) {
+  const p = pkgs[key];
+  const feats = p.features.map(f => `<div class="modal-feat"><i class="${f.icon}"></i> ${f.text}</div>`).join('');
+  document.getElementById('modalContent').innerHTML = `
+    <div class="modal-pkg-name">${p.name}</div>
+    <div class="modal-price">${p.price} <small>${p.per}</small></div>
+    <div class="modal-desc">${p.desc}</div>
+    <div class="modal-divider"></div>
+    <div class="modal-features">${feats}</div>
+    <div class="modal-divider"></div>
+    <button class="btn-gold" style="width:100%;justify-content:center;margin-top:10px;" onclick="closePkgModal();openBookingModal()">
+      BOOK THIS PACKAGE <i class="fas fa-arrow-right"></i>
+    </button>
+  `;
+  document.getElementById('pkgModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closePkgModal() {
+  document.getElementById('pkgModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function openBookingModal() {
+  document.getElementById('bookingModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeBookingModal() {
+  document.getElementById('bookingModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+async function submitContact() {
+  const name    = document.getElementById('cName').value.trim();
+  const email   = document.getElementById('cEmail').value.trim();
+  const phone   = document.getElementById('cPhone').value.trim();
+  const pkg     = document.getElementById('cPackage').value;
+  const msg     = document.getElementById('cMsg').value.trim();
+  const btn     = document.getElementById('contactBtn');
+  if (!name)  { setStatus('contactStatus','Please enter your name.','error'); return; }
+  if (!phone) { setStatus('contactStatus','Please enter your phone number.','error'); return; }
+  btn.disabled = true;
+  btn.innerHTML = 'SENDING... <i class="fas fa-spinner fa-spin"></i>';
+  setStatus('contactStatus', '', '');
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ access_key: W3F_KEY, subject: 'New Umrah Enquiry — Bab Al-Fatah', name, email, phone, package: pkg || 'Not selected', message: msg || 'No message provided' })
+    });
+    const data = await res.json();
+    if (data.success) {
+      setStatus('contactStatus', '✅ Message sent! We will contact you shortly.', 'success');
+      ['cName','cEmail','cPhone','cMsg'].forEach(id => document.getElementById(id).value = '');
+      document.getElementById('cPackage').selectedIndex = 0;
+      btn.innerHTML = 'SENT ✓';
+      setTimeout(() => { btn.disabled = false; btn.innerHTML = 'SEND MESSAGE <i class="fas fa-paper-plane"></i>'; }, 4000);
+    } else { throw new Error(data.message); }
+  } catch {
+    setStatus('contactStatus', 'Something went wrong. Please call us directly.', 'error');
+    btn.disabled = false;
+    btn.innerHTML = 'SEND MESSAGE <i class="fas fa-paper-plane"></i>';
+  }
+}
+
+async function submitBooking() {
+  const name     = document.getElementById('bName').value.trim();
+  const phone    = document.getElementById('bPhone').value.trim();
+  const email    = document.getElementById('bEmail').value.trim();
+  const pilgrims = document.getElementById('bPilgrims').value;
+  const pkg      = document.getElementById('bPackage').value;
+  const date     = document.getElementById('bDate').value;
+  const notes    = document.getElementById('bNotes').value.trim();
+  const btn      = document.getElementById('bookingBtn');
+  if (!name)  { setModalStatus('bookingStatus','Please enter your full name.','error'); return; }
+  if (!phone) { setModalStatus('bookingStatus','Please enter your phone number.','error'); return; }
+  btn.disabled = true;
+  btn.innerHTML = 'SENDING... <i class="fas fa-spinner fa-spin"></i>';
+  setModalStatus('bookingStatus', '', '');
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ access_key: W3F_KEY, subject: 'New Booking Request — Bab Al-Fatah', name, phone, email, pilgrims: pilgrims || 'Not specified', package: pkg || 'Not selected', travel_date: date || 'Not specified', special_requirements: notes || 'None' })
+    });
+    const data = await res.json();
+    if (data.success) {
+      setModalStatus('bookingStatus', '✅ Booking received! Our team will call you within 24 hours.', 'success');
+      ['bName','bPhone','bEmail','bPilgrims','bDate','bNotes'].forEach(id => document.getElementById(id).value = '');
+      document.getElementById('bPackage').selectedIndex = 0;
+      btn.innerHTML = 'BOOKING CONFIRMED ✓';
+      setTimeout(() => { btn.disabled = false; btn.innerHTML = 'CONFIRM BOOKING <i class="fas fa-check"></i>'; }, 5000);
+    } else { throw new Error(data.message); }
+  } catch {
+    setModalStatus('bookingStatus', 'Something went wrong. Please call us directly.', 'error');
+    btn.disabled = false;
+    btn.innerHTML = 'CONFIRM BOOKING <i class="fas fa-check"></i>';
+  }
+}
+
+function checkReveal() {
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight - 80) el.classList.add('visible');
+  });
+}
+window.addEventListener('scroll', checkReveal);
+window.addEventListener('load', checkReveal);
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') { closePkgModal(); closeBookingModal(); }
+});
+</script>
+</body>
+</html>
